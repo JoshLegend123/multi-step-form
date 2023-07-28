@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="multi-step-form.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section id="form">
+    <!-- Sidebar start -->
+    <section id="sidebar">
+      <div class="steps">
+        <div id="badge"><div id="badge-value">1</div></div>
+        <div id="process">
+          <p>Step 1</p>
+          <h2>YOUR INFO</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge"><div id="badge-value">2</div></div>
+        <div id="process">
+          <p>Step 2</p>
+          <h2>SELECT PLANS</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge" class="active"><div id="badge-value">3</div></div>
+        <div id="process">
+          <p>Step 3</p>
+          <h2>ADD-ONS</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge"><div id="badge-value">4</div></div>
+        <div id="process">
+          <p>Step 4</p>
+          <h2>SUMMARY</h2>
+        </div>
+      </div>
+    </section>
+    <section id="personal-details">
+      <h2>Pick add-ons</h2>
+      <p>Add-ons help enhance your gaming experience</p>
+      <section id="add-container">
+        <div class="add">
+            <input type="checkbox">
+            <div id="add-text">
+                <h4>Online service</h4>
+                <p>Access to multiplayer games</p>
+            </div>
+            <p id="add-on-price">+$1/mo</p>
+        </div>
+        <div class="add">
+            <input type="checkbox">
+            <div id="add-text">
+                <h4>Larger storage</h4>
+                <p>Extra 1TB of cloud save</p>
+            </div>
+            <p id="add-on-price">+$2/mo</p>
+        </div>
+        <div class="add">
+            <input type="checkbox">
+            <div id="add-text">
+                <h4>Customizable profile</h4>
+                <p>Custom theme on your profile</p>
+            </div>
+            <p id="add-on-price">+$2/mo</p>
+        </div>
+      </section>
+      <section id="buttons">
+        <a href="Step2-monthly.html" id="go-back">Go Back</a>
+        <a href="Step4-monthly.html"><button>Next Step</button></a>
+      </section>
+    </section>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ukaka Joshua</a>.
+  </div>
+</body>
+<script>
+  var add = document.getElementsByClassName('add');
+  add[0].onclick = function () {
+    if (add[0].classList.contains('plan-active')) {
+      add[0].classList.remove('plan-active')
+    } else {
+      add[0].classList.add('plan-active')
+    }
+  }
+  add[1].onclick = function () {
+    if (add[1].classList.contains('plan-active')) {
+      add[1].classList.remove('plan-active')
+    } else {
+      add[1].classList.add('plan-active')
+    }
+  }
+  add[2].onclick = function () {
+    if (add[2].classList.contains('plan-active')) {
+      add[2].classList.remove('plan-active')
+    } else {
+      add[2].classList.add('plan-active')
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="multi-step-form.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section id="form">
+    <!-- Sidebar start -->
+    <section id="sidebar">
+      <div class="steps">
+        <div id="badge"><div id="badge-value">1</div></div>
+        <div id="process">
+          <p>Step 1</p>
+          <h2>YOUR INFO</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge" class="active"><div id="badge-value">2</div></div>
+        <div id="process">
+          <p>Step 2</p>
+          <h2>SELECT PLANS</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge"><div id="badge-value">3</div></div>
+        <div id="process">
+          <p>Step 3</p>
+          <h2>ADD-ONS</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div id="badge"><div id="badge-value">4</div></div>
+        <div id="process">
+          <p>Step 4</p>
+          <h2>SUMMARY</h2>
+        </div>
+      </div>
+    </section>
+    <section id="personal-details">
+      <h2>Select your plan</h2>
+      <p>You have the option of monthly or yearly billing.</p>
+      <section id="plan-container">
+        <div class="plan">
+            <img src="assets/images/icon-arcade.svg" alt="">
+            <div id="plan-text">
+                <h4>Arcade</h4>
+                <p>$9/mo</p>
+            </div>
+        </div>
+        <div class="plan">
+          <img src="assets/images/icon-advanced.svg" alt="">
+          <div id="plan-text">
+              <h4>Advanced</h4>
+              <p>$12/mo</p>
+          </div>
+      </div>
+      <div class="plan">
+        <img src="assets/images/icon-pro.svg" alt="">
+        <div id="plan-text">
+            <h4>Pro</h4>
+            <p>$15/mo</p>
+        </div>
+    </div>
+      </section>
+      <section id="duration">
+        <p id="current">Monthly</p>
+          <a href="Step2-yearly.html">
+            <div id="selection">
+              <div id="monthly-circle"></div>
+            </div>
+          </a>
+        <p>Yearly</p>
+      </section>
+      <section id="buttons">
+        <a href="Step1.html" id="go-back">Go Back</a>
+        <a href="Step3-monthly.html"><button>Next Step</button></a>
+      </section>
+    </section>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ukaka Joshua</a>.
+  </div>
+  <script>
+    let plan = document.getElementsByClassName('plan');
+    plan[0].onclick = function () {
+        plan[0].classList.add('plan-active')
+        plan[1].classList.remove('plan-active')
+        plan[2].classList.remove('plan-active')
+    }
+    plan[1].onclick = function () {
+        plan[1].classList.add('plan-active')
+        plan[0].classList.remove('plan-active')
+        plan[2].classList.remove('plan-active')
+    }
+    plan[2].onclick = function () {
+        plan[2].classList.add('plan-active')
+        plan[1].classList.remove('plan-active')
+        plan[0].classList.remove('plan-active')
+    }
+  </script>
+</body>
+</html>
