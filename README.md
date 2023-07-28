@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Mentor - Multi-step form
 
 ![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
@@ -94,3 +95,7 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+=======
+# multi-step-form
+a multi-step sign up form with different steps and packages for yearly and monthly plan.
+>>>>>>> b77d79363b0c46abe997b5a42abf3066253a1bb9
